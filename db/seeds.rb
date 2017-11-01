@@ -10,7 +10,7 @@
 @popular_movies = Tmdb::Movie.popular
 
 @popular_movies.each do |movie|
-  poster_url = "https://images-na.ssl-images-amazon.com/images/M/" + movie.poster_path
+  poster_url = "https://image.tmdb.org/t/p/w500" + movie.poster_path
   movie_detail = Tmdb::Movie.detail(movie.id)
   tagline = movie_detail["tagline"]
   Movie.create!(title: movie.title, poster_url: poster_url, tagline: tagline)
