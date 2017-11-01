@@ -1,4 +1,4 @@
-class Votes < ActiveRecord::Migration[5.1]
+class CreateVotes < ActiveRecord::Migration[5.1]
   def change
     create_table :votes do |t|
       t.boolean :love_scrub

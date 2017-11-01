@@ -1,4 +1,4 @@
-class Ratings < ActiveRecord::Migration[5.1]
+class CreateRatings < ActiveRecord::Migration[5.1]
   def change
     create_table :ratings do |t|
       t.integer :star_rating

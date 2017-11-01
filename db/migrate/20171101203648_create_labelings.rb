@@ -1,4 +1,4 @@
-class Labelings < ActiveRecord::Migration[5.1]
+class CreateLabelings < ActiveRecord::Migration[5.1]
   def change
     create_table :labelings do |t|
       t.integer :movie_id
