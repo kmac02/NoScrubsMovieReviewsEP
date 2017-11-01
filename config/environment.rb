@@ -5,3 +5,6 @@ require_relative 'application'
 Rails.application.initialize!
 
 require 'httparty'
+
+
+# Tmdb.Configuration.configure do
