@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NoScrubsMovieReviewsEP</title>
+    <title>No Scrubs Movi eReviews Entertainment Productions</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= link_to "#{current_user.username}", user_path(current_user) %>
+      <button id="logout-button"><%= link_to 'Logout', logout_path %></button>
+    <% else %>
+      <button id="login-button"><%= link_to 'Login', login_path %></button>
+      <button id="register-button"><%= link_to 'Register', new_user_path %></button>
+    <% end %>
     <%= yield %>
   </body>
 </html>
