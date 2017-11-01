@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+img {
+  width: 150px;
+  margin: 10px;
+}
+
+html {
+  background: linear-gradient(#ffb349, #0fad85);
+
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact;
+}
+
+footer {
+  text-align: center;
+  font-family: sans-serif;
+}

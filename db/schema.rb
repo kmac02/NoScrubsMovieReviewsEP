@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20171101203648) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "labelings", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "genre_id"
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "movie_genres", force: :cascade do |t|
-    t.string "name"
+  create_table "labelings", force: :cascade do |t|
+    t.integer "movie_id"
+    t.integer "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
