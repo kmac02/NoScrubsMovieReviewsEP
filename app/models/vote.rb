@@ -3,6 +3,6 @@ class Vote < ActiveRecord::Base
   belongs_to :review
 
   validates :voter, uniqueness: { scope: :review }, { message: "You have already shared your love/scrub of this review" }
-  validates :love_srub, presence: true
+  validates :love_scrub, presence: true
 
 end
