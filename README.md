@@ -1,24 +1,15 @@
-# README
+# No Scrubs Movie Reviews Entertainment Productions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Team
+* Melissa Kanhirun: mk7run
+* Austin Ratcliff: austinratcliff
+* Michelle Di Biase: dibiasemi
+* Kristin MacDonough: kmac02
 
-Things you may want to cover:
+Movie review application that allows users to rate a movie, review a movie, comment on a review, and vote on a review. Reviews are ordered by most trusted reviewers and other users can rate the review with 'luv it' or 'scrub it'. Users are able to remain anonymous.
 
-* Ruby version
+#### Installation:
+Coming soon to a computer near you.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Use:
+Coming soon to a computer near you.
