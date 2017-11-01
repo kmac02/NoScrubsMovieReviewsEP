@@ -3,8 +3,3 @@ require_relative 'application'
 
 # Initialize the Rails application.
 Rails.application.initialize!
-
-require 'httparty'
-
-
-# Tmdb.Configuration.configure do
