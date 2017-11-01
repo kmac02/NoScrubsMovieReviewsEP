@@ -21,7 +21,11 @@ img {
 
 html {
   background: linear-gradient(#ffb349, #0fad85);
+  /*cursor: url('pizza.png'), auto*/
+}
 
+* {
+  cursor: url('pizza.png'), auto
 }
 
 h1 {
