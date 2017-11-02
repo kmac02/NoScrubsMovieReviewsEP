@@ -102,22 +102,21 @@ body {
   max-height: 300px;
   overflow: hidden;
   border: 2px solid #f442f1;
-  border-radius: 2px;
-  box-shadow: 8px 5px 35px #f442f1;
+  box-shadow: 0px 0px 30px 8px #f442f1;
+  transition: box-shadow 1s;
 }
 
 .index-posters:hover {
   outline: none;
   border-color: #42f4f1;
-  box-shadow: 0 0 30px #42f4f1;
+  box-shadow: 0 0 30px 8px #42f4f1;
 }
 
 /*MOVIE REVIEWS SHOW*/
 
 img.show-poster {
   width: 250px;
-  border-radius: 2px;
-  box-shadow: 8px 5px 35px #f442f1;
+  box-shadow: 0px 0px 30px 8px #f442f1;
 }
 
 /* Create three equal columns*/
@@ -168,13 +167,14 @@ img.genre-posters {
   overflow-y: hidden;
   justify-content: center;
   border: 2px solid #f442f1;
-  border-radius: 2px;
-  box-shadow: 8px 5px 35px #f442f1;
+  box-shadow: 0px 0px 30px 8px #f442f1;
+  transition: box-shadow 1s;
 }
 
 .genre-scroll-container:hover {
+  outline: none;
   border-color: #42f4f1;
-  box-shadow: 0 0 30px #42f4f1;
+  box-shadow: 0 0 30px 8px #42f4f1;
 }
 
 /*HORIZONTAL SCROLL ON GENRE INDEX PAGE*/
@@ -205,13 +205,13 @@ img.genre-posters {
   overflow-y: hidden;
   justify-content: center;
   border: 2px solid #f442f1;
-  border-radius: 2px;
-  box-shadow: 8px 5px 35px #f442f1;
+  box-shadow: 0px 0px 30px 8px #f442f1;
+  transition: box-shadow 1s;
 }
 
 .genre-container:hover {
   border-color: #42f4f1;
-  box-shadow: 0 0 30px #42f4f1;
+  box-shadow: 0 0 30px 8px #42f4f1;
 }
 
 
