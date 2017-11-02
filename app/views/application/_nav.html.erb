@@ -1,6 +1,6 @@
 <nav class="nav">
   <% if current_user %>
-    <%= link_to "#{current_user.username}", user_path(current_user) %>
+    <%= link_to "What's up, #{current_user.username.capitalize}?", user_path(current_user) %>
     <button id="logout-button"><%= link_to 'Logout', logout_path %></button>
     <div class="login-message"></div>
   <% else %>

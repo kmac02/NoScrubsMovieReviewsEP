@@ -2,7 +2,7 @@
   <div id="show-movie-review-column">
     <h3 class="movie-title-header"><%= @review.movie.title %></h3>
     <p class="review-content">"<%= @review.content %>"</p>
-    <p class="reviewer-name">Reviewed by: <%= @review.reviewer.username %> </p>
+    <p class="reviewer-name"><i>Reviewed by: <%= @review.reviewer.username.capitalize %></i></p>
   </div>
 
   <div id="show-comments-column">
@@ -11,7 +11,7 @@
     <% else %>
       <% @review.comments.each do |comment| %>
         <p><%= comment.content %></p>
-        <p>Commented by <%= comment.commenter.username %></p>
+        <p><i>Commented by <%= comment.commenter.username.capitalize %></i></p>
         <hr>
       <% end %>
     <% end %>

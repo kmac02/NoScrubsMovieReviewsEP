@@ -10,7 +10,7 @@
     <% if @movie.ratings.blank? %>
       <p>This movie hasn't been rated yet. Rate it here!</p>
     <% else %>
-      <p>Rating:<%= @movie.total_rating %> </p>
+      <p>Rating: <%= @movie.total_rating %> luvs</p>
     <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
 
@@ -46,6 +46,7 @@
         <div class="review-overlay">
           <% @movie.reviews.each do |review| %>
             <p><%= review.content %></p>
+            <p><i>Reviewed by: <%= review.reviewer.username.capitalize %></i></p>
             <%= link_to "Comments", review_comments_path(review) %>
           <% end %>
         </div>
