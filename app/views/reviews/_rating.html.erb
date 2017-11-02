@@ -1,0 +1,17 @@
+    <div class="heart-rating">
+      <%= form_for(@rating, url: movie_ratings_path, method: "post") do |f| %>
+        <button class="heart-rating-value" type="submit" name="star_rating" value= 1>
+        </button>
+      <% end %>
+
+      <%= form_for(@rating, url: movie_ratings_path, method: "post") do |f| %>
+        <button class="heart-rating-value" type="submit" name="star_rating" value= 2>
+        </button>
+      <% end %>
+
+      <%= form_for(@rating, url: movie_ratings_path, method: "post") do |f| %>
+        <button class="heart-rating-value" type="submit" name="star_rating" value= 3>
+        </button>
+      <% end %>
+
+    </div>

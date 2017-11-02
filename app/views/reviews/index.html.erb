@@ -4,15 +4,8 @@
     <% if @movie.tag_line != "" %>
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
+    <%= render partial: "rating" %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
-    <div class="heart-rating">
-      <%= form_for(@movie, url: movie_ratings_path, method: "post") do |f| %>
-        <%= image_submit_tag "luv.png", class: "heart-rating", star_rating: 1 %>
-      <% end %>
-
-      <%= link_to image_tag('luv.png', class: "heart-rating") %>
-      <%= link_to image_tag('luv.png', class: "heart-rating") %>
-    </div>
     <% if @ratings.blank? %>
       <p>This movie hasn't been rated yet. Rate it below!</p>
     <% else %>

@@ -151,7 +151,21 @@ img.show-poster {
   color: #f6f7ea ;
 }
 
-.heart-rating {
+.heart-rating form {
+  display: inline-block;
+}
+
+.heart-rating-value {
   width: 20px;
+  height: 25px;
+  margin: 4px;
+  background-image: image-url("luv.png");
+  background-size: 100% 100%;
+}
+
+.heart-rating-value:hover {
+  /*box-shadow: -5px 0px 35px red;*/
+  background-image: image-url("luv-red.png");
+
 }
 

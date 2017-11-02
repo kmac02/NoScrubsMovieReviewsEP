@@ -6,7 +6,9 @@ class RatingsController < ApplicationController
 
   def create
     @movie = Movie.find(params[:movie_id])
-    @rating = @movie.ratings.new(rating_params)
+    p params["rating"["star_rating"]]
+
+    @rating = @movie.ratings.new(movie_id: @movie.id, rater_id: current_user.id, star_rating: params[:star_rating])
     if @rating.save
       redirect_to movie_reviews_path(@movie)
     else
@@ -15,8 +17,8 @@ class RatingsController < ApplicationController
   end
 
   private
-  def rating_params
-    params.require(rating).permit(:star_rating).merge(rater_id: current_user.id)
-  end
+  # def rating_params
+  #   params.require(:rating).permit(:star_rating).merge(reviewer_id: current_user.id)
+  # end
 
 end
