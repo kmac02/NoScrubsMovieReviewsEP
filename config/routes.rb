@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :movies, only: [:index] do
     resources :reviews, only: [:index, :new, :create]
+    resources :ratings, only: [:new, :create]
   end
 
   resources :genres, only: [:index, :show]

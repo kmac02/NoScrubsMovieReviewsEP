@@ -6,9 +6,12 @@
     <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
     <div class="heart-rating">
-      <%= link_to image_tag('luv.png', class: "heart", value: 1) %>
-      <%= link_to image_tag('luv.png', class: "heart") %>
-      <%= link_to image_tag('luv.png', class: "heart") %>
+      <%= form_for(@movie, url: movie_ratings_path, method: "post") do |f| %>
+        <%= image_submit_tag "luv.png", class: "heart-rating", star_rating: 1 %>
+      <% end %>
+
+      <%= link_to image_tag('luv.png', class: "heart-rating") %>
+      <%= link_to image_tag('luv.png', class: "heart-rating") %>
     </div>
     <% if @ratings.blank? %>
       <p>This movie hasn't been rated yet. Rate it below!</p>
