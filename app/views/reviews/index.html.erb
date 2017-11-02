@@ -4,7 +4,14 @@
     <% if @movie.tag_line != "" %>
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
-    <%= render partial: "rating" %>
+    <% if !@movie.raters.include?(current_user) %>
+      <%= render partial: "rating" %>
+    <% end %>
+    <% if @movie.ratings.blank? %>
+      <p>This movie hasn't been rated yet. Rate it here!</p>
+    <% else %>
+      <p>Rating:<%= @movie.total_rating %> </p>
+    <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
 
     <% if @movie.genres != nil %>
@@ -28,17 +35,12 @@
       <p> This movie isn't classified under a specific genre </p>
     <% end %>
 
-    <% if @ratings.blank? %>
-      <p>This movie hasn't been rated yet. Rate it below!</p>
-    <% else %>
-      <p>Rating:<%= @movie.total_rating %> </p>
-    <% end %>
   </div>
 
   <div id="show-review-column">
     <div class="overlay">
       <% if @movie.reviews.blank? %>
-        <p>No reviews just yet, add one below!</p>
+        <p>No reviews just yet, add one!</p>
       <% else %>
         <% @movie.reviews.each do |review| %>
           <p><%= review.content %></p>
