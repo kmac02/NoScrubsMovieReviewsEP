@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
 
   def new
+    respond_to do |format|
+      format.html { redirect_to "sessions#new" }
+      format.js
+    end
   end
 
   def create
