@@ -10,12 +10,12 @@ Rails.application.routes.draw do
 
 
   resources :movies, only: [:index] do
-    resources :reviews, only: [:index, :new]
+    resources :reviews, only: [:index, :new, :create]
   end
 
   resources :genres, only: [:index, :show]
 
   resources :reviews, only: [] do
-    resources :comments, only: [:index, :new]
+    resources :comments, only: [:index, :new, :create]
   end
 end

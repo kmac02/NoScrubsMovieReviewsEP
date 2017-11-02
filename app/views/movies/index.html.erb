@@ -1,5 +1,5 @@
 <% @movies.each do |movie| %>
-  <%= link_to movie_path(movie) do %>
+  <%= link_to movie_reviews_path(movie) do %>
     <img src="<%=movie.poster_url%>">
   <% end %>
 

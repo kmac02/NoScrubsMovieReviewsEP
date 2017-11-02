@@ -10,13 +10,16 @@ class CommentsController < ApplicationController
 
   def create
     @review = Review.find(params[:review_id])
-    @comment = @review.comments.create(comments_params)
-    # change to save method for error handling
-    redirect_to review_comment_path(@review, @comment)
+    @comment = @review.comments.new(comments_params)
+    if @comment.save
+      redirect_to review_comments_path(@review, @comment)
+    else
+      redirect_to review_comments_path(@review, @comment)
+    end
   end
-  
+
   private
   def comments_params
-     params.require(:comment).permit(:content) 
+     params.require(:comment).permit(:content).merge(commenter_id: current_user.id)
   end
 end

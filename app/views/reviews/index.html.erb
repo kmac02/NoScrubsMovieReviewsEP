@@ -10,12 +10,12 @@
 </div>
 
 <div class="review-list-container">
-  <% if @reviews.blank? %>
+  <% if @movie.reviews.blank? %>
     <p>No reviews just yet, would you like to add the first!</p>
   <% else %>
-    <% @reviews.each do |review| %>
+    <% @movie.reviews.each do |review| %>
       <p><%= review.content %></p>
-      <%= link_to "Comments", review_comments_path(review) %>
+     <%= link_to "Comments", review_comments_path(review) %>
     <% end %>
   <% end %>
 <div>
@@ -23,3 +23,4 @@
 <div class="review-form-container">
   <%= render "reviews/new"%>
 </div>
+
