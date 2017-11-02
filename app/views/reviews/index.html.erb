@@ -5,6 +5,7 @@
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
+    <%= favicon_link_tag 'luv.png' %>
     <% if @ratings.blank? %>
       <p>This movie hasn't been rated yet. Rate it below!</p>
     <% else %>
