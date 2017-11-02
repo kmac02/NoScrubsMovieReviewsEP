@@ -20,6 +20,9 @@ img {
   margin: 10px;
 }
 
+img.heart {
+  width: 20px;
+}
 
 * {
   cursor: url('pizza.png'), auto;
@@ -296,3 +299,22 @@ input {
   letter-spacing: .05em;
   background-color: #f77b33;
 }
+
+.heart-rating form {
+  display: inline-block;
+}
+
+.heart-rating-value {
+  width: 20px;
+  height: 25px;
+  margin: 4px;
+  background-image: image-url("luv.png");
+  background-size: 100% 100%;
+}
+
+.heart-rating-value:hover {
+  /*box-shadow: -5px 0px 35px red;*/
+  background-image: image-url("luv-red.png");
+
+}
+

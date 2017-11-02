@@ -2,6 +2,7 @@ class Movie < ActiveRecord::Base
   has_many :reviews
   has_many :reviewers, through: :reviews, source: :reviewer
   has_many :ratings
+  has_many :raters, through: :ratings, source: :rater
   has_many :labelings
   has_many :genres, through: :labelings
 
