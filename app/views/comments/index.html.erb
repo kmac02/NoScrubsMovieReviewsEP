@@ -12,13 +12,17 @@
       <% @review.comments.each do |comment| %>
         <p><%= comment.content %></p>
         <p>Commented by <%= comment.commenter.username %></p>
+        <hr>
       <% end %>
     <% end %>
   </div>
 
   <div id="show-form-column">
-    <% if logged_in? %>
-    <h3>Produce a Comment</h3>
+    <% if logged_in? && current_user != @review.reviewer %>
+      <h3>Produce a Comment</h3>
+      <%= render "new" %>
+    <% elsif logged_in? && current_user == @review.reviewer && @review.comments.length > 0 %>
+      <h3>Produce a Comment</h3>
       <%= render "new" %>
     <% end %>
   </div>

@@ -4,7 +4,7 @@
     <% if @movie.tag_line != "" %>
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
-    <% if !@movie.raters.include?(current_user) %>
+    <% if logged_in? && !@movie.raters.include?(current_user) %>
       <%= render partial: "rating" %>
     <% end %>
     <% if @movie.ratings.blank? %>
