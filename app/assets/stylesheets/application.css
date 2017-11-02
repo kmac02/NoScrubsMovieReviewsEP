@@ -19,18 +19,33 @@ img {
   margin: 10px;
 }
 
-html {
-  background: linear-gradient(#ffb349, #0fad85);
-  /*cursor: url('pizza.png'), auto*/
-}
 
 * {
   cursor: url('pizza.png'), auto
 }
 
+@font-face {
+  font-family: "Broadway_Bold";
+  src: url(Broadway_Bold.ttf);
+}
+
 h1 {
+  font-size: 100px;
+  text-shadow: 2px 2px 8px white;
   text-align: center;
-  font-family: Impact;
+  font-family: "Broadway_Bold";
+  margin: 40px 0px 0px 0px;
+  color: #4bd1d8;
+}
+
+h2 {
+  font-size: 75px;
+  text-shadow: 4px 4px 16px black;
+  text-shadow: black 3px 6px;
+  text-align: center;
+  font-family: "Broadway_Bold";
+  margin: 0px 0px 40px 0px;
+  color: #e590e1;
 }
 
 footer {
@@ -50,15 +65,67 @@ button {
 
 /*MOVIES INDEX*/
 body {
-  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(#f48342, #0fad85);
+/*  background-image: url('gradiant.png');*/
+  background-attachment: fixed;
+  background: linear-gradient(#f48342, #4bd1d8);
   background-repeat: no-repeat;
+ /* background-size: cover;*/
 }
 
-html {
-  height: 100%;
+.index-posters {
+  border: 2px solid #f442f1;
+  border-radius: 2px;
+  box-shadow: 8px 5px 35px #f442f1;
+}
+
+.index-posters:hover {
+  outline: none;
+  border-color: #42f4f1;
+  box-shadow: 0 0 30px #42f4f1;
+}
+
+.index-container {
+  width: 100%;
 }
 
 /*MOVIES SHOW*/
+
+/*.movie-show-details {
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 10px;
+}
+
+.review-list-container {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 10px;
+}
+
+.show-container {
+  text-align: center;
+}*/
+
+img.show-poster {
+width: 450px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  display: inline-block;
+  text-align: center;
+  vertical-align: bottom;
+  width: 33.29%;
+  padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
