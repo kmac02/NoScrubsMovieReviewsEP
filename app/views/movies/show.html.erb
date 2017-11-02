@@ -1,34 +1,33 @@
-
-<div class="column">
-  <h3><%= @movie.title %></h3>
-  <% if @movie.tag_line != "" %>
-    <h3><i>"<%= @movie.tag_line %>"</i></h3>
-  <% end %>
-  <img class="show-poster" src="<%= @movie.poster_url%>">
-  <% if @ratings.blank? %>
-    <p>This movie hasn't been rated yet. Rate it below!</p>
-  <% else %>
-    <p>Rating:<%= @movie.total_rating %> </p>
-  <% end %>
-</div>
-
-<div class="column">
-  <% if @reviews.blank? %>
-    <p>No reviews just yet, add one below!</p>
-  <% else %>
-    <% @reviews.each do |review| %>
-      <p><%= review.content %></p>
-      <%= link_to "Comments", review_comments_path(review) %>
+<div id="grid">
+  <div id="show-poster-column">
+    <h3><%= @movie.title %></h3>
+    <% if @movie.tag_line != "" %>
+      <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
-  <% end %>
-</div>
+    <img class="show-poster" src="<%= @movie.poster_url%>">
+    <% if @ratings.blank? %>
+      <p>This movie hasn't been rated yet. Rate it below!</p>
+    <% else %>
+      <p>Rating:<%= @movie.total_rating %> </p>
+    <% end %>
+  </div>
 
-<div class="column">
-  <h3>Produce a Review</h3>
-  <p>A form will go here....</p>
-</div>
+  <div id="show-review-column">
+    <div class="overlay">
+    <% if @reviews.blank? %>
+      <p>No reviews just yet, add one below!</p>
+    <% else %>
+      <% @reviews.each do |review| %>
+        <p><%= review.content %></p>
+        <%= link_to "Comments", review_comments_path(review) %>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
 
-<div class="clear-fix">
-
+  <div id="show-form-column">
+    <h3>Produce a Review</h3>
+    <p>A form will go here....</p>
+  </div>
 
 </div>
