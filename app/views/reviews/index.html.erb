@@ -26,7 +26,11 @@
   </div>
 
   <div id="show-form-column">
-    <h3>Produce a Review</h3>
-    <%= render "reviews/new"%>
+    <% if @movie.reviewers.include?(current_user) %>
+      <h3>"Thanks for reviewing this movie!"</h3>
+    <% else %>
+      <h3>Produce a Review</h3>
+      <%= render "reviews/new"%>
+    <% end %>
   </div>
 </div>
