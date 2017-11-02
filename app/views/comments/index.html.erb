@@ -1,10 +1,25 @@
-<h1><%= @review.movie.title %></h1>
+<div id="grid">
+  <div id="show-movie-review-column">
+    <h3 class="movie-title-header"><%= @review.movie.title %></h3>
+    <p class="review-content">"<%= @review.content %>"</p>
+    <p class="reviewer-name">Reviewed by: <%= @review.reviewer.username %> </p>
+  </div>
 
-<h3><%= @review.content %></h3>
+  <div id="show-comments-column">
+    <% if @review.comments.empty? %>
+      <p>This review hasn't been commented on yet. Be the first to comment!</p>
+    <% else %>
+      <% @review.comments.each do |comment| %>
+        <p><%= comment.content %></p>
+        <p>Commented by <%= comment.commenter.username %></p>
+      <% end %>
+    <% end %>
+  </div>
 
-<% @review.comments.each do |comment| %>
-  <p><%= comment.content %></p>
-  <p>Commented by <%= comment.commenter.username %></p>
-<% end %>
-
-<%= render "new" %>
+  <div id="show-form-column">
+    <% if logged_in? %>
+    <h3>Produce a Comment</h3>
+      <%= render "new" %>
+    <% end %>
+  </div>
+</div>
