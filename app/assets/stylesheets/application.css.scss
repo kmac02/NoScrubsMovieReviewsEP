@@ -26,6 +26,7 @@ img.heart {
 
 * {
   cursor: url('pizza.png'), auto;
+  font-family: sans-serif;
 }
 
 @font-face {
@@ -52,10 +53,17 @@ h2 {
   color: #e590e1;
 }
 
+h4 {
+  font-size: 2em;
+  text-align: center;
+  font-family: Impact;
+  letter-spacing: 1px;
+}
+
 footer {
   text-align: center;
   font-family: sans-serif;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 
@@ -74,6 +82,7 @@ html, body{
 }
 
 body {
+  font-family: sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -107,12 +116,19 @@ body {
   box-shadow: 0 0 30px #42f4f1;
 }
 
-/*MOVIES SHOW*/
+/*MOVIE REVIEWS SHOW*/
 
 img.show-poster {
   width: 250px;
   border-radius: 2px;
-  box-shadow: 8px 5px 35px #f442f1
+  box-shadow: 8px 5px 35px #f442f1;
+}
+
+.movie-title-header {
+  margin: 20px;
+  font-family: Impact;
+  font-size: 2.5em;
+  letter-spacing: 1px;
 }
 
 /* Create three equal columns*/
@@ -126,7 +142,7 @@ img.show-poster {
   text-align: center;
 }
 
-#show-review-column{
+#show-review-column {
   background-color: rgba(246, 247, 234, 0.55);
   border-style: none;
   border-color: none;
@@ -137,18 +153,151 @@ img.show-poster {
   text-align: center;
 }
 
-
 #show-form-column {
   grid-column: 3 / 3;
   margin: 10px;
   text-align: center;
 }
 
+/*HORIZONTAL GENRE SCROLL ON REVIEWS PAGE*/
+.genre-poster-div {
+  margin: 0px;
+  padding: 0px;
+}
+
+img.genre-posters {
+  height: 100px;
+  width: 75px;
+  margin: 0px;
+  padding: 0px
+}
+
+.genre-scroll-container {
+  display: flex;
+  height: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  justify-content: center;
+  border: 2px solid #f442f1;
+  border-radius: 2px;
+  box-shadow: 8px 5px 35px #f442f1;
+}
+
+.genre-scroll-container:hover {
+  border-color: #42f4f1;
+  box-shadow: 0 0 30px #42f4f1;
+}
+
+/*HORIZONTAL SCROLL ON GENRE INDEX PAGE*/
+.genre-list-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.genre-div {
+  margin: 0px;
+  padding: 0px;
+}
+
+img.genre-posters {
+  height: 100px;
+  width: 75px;
+  margin: 0px;
+  padding: 0px
+}
+
+.genre-container {
+  display: flex;
+/*  width: 400px;
+  height: 100px;*/
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  justify-content: center;
+  border: 2px solid #f442f1;
+  border-radius: 2px;
+  box-shadow: 8px 5px 35px #f442f1;
+}
+
+.genre-container:hover {
+  border-color: #42f4f1;
+  box-shadow: 0 0 30px #42f4f1;
+}
+
 
 /* Editing Navigation for Pagination */
 .pagination {
   text-align: center;
-  color: #f6f7ea ;
+  color: white;
+}
+
+.pagination > span {
+  text-align: center;
+  margin: 20px;
+}
+
+/*STYLING LINKS*/
+a:link {
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-shadow: 5px 5px 10px black;
+  color: #4bd1d8;
+  text-decoration: none;
+}
+
+/* comments show page */
+#show-movie-review-column {
+  margin: 10px;
+  text-align: center;
+}
+
+#show-comments-column {
+  background-color: rgba(246, 247, 234, 0.55);
+  border-style: none;
+  border-color: none;
+  border-radius: 5px;
+  grid-column: 2 / 3;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  height: 570px;
+}
+
+.reviewer-name {
+  text-align: right;
+}
+
+.review-content {
+  padding: 30px;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+textarea {
+  border-radius: 5px;
+  border: none;
+  height: 300px;
+  width: 350px;
+  resize: none;
+}
+
+input {
+  border-radius: 5px;
+  font-family: Impact;
+  letter-spacing: .05em;
+  background-color: #f77b33;
 }
 
 .heart-rating form {

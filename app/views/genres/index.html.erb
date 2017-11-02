@@ -1,9 +1,20 @@
-<h2 id="genre-header">Genres:</h2>
+<h4 id="genre-header">Genres</h4>
 
-<div id="genre-list-container">
-  <ul>
-    <% @genres.each do |genre| %>
-      <li><%= link_to genre.name, genre %></li>
+<div class="genre-list-container">
+  <% @genres.each do |genre| %>
+    <p><%= link_to genre.name, genre %></p>
+    <% if !genre.movies.empty? %>
+      <div class="genre-container">
+        <% genre.movies.each do |movie| %>
+          <div class="genre-div">
+            <%= link_to movie_reviews_path(movie) do %>
+            <img src="<%=movie.poster_url%>" class="genre-posters">
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p>There are currenly no movies listed under this genre</p>
     <% end %>
-  </ul>
+  <% end %>
 </div>
