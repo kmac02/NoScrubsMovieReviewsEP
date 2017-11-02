@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :genres, only: [:index, :show]
 
-  resources :reviews, only: [:show, :create, :new] do
-    resources :comments, only: [:show, :create, :new]
+  resources :reviews do
+    resources :comments
   end
 end
