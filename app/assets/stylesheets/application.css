@@ -71,6 +71,7 @@ button {
 html, body{
   min-height: 100%;
 }
+
 body {
   width: 100%;
   margin: 0;
@@ -80,7 +81,20 @@ body {
   background-repeat: no-repeat;
 }
 
+.index-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.poster-div {
+  display: inline-block;
+}
+
 .index-posters {
+  max-height: 300px;
+  overflow: hidden;
   border: 2px solid #f442f1;
   border-radius: 2px;
   box-shadow: 8px 5px 35px #f442f1;
@@ -90,10 +104,6 @@ body {
   outline: none;
   border-color: #42f4f1;
   box-shadow: 0 0 30px #42f4f1;
-}
-
-.index-container {
-  width: 100%;
 }
 
 /*MOVIES SHOW*/
