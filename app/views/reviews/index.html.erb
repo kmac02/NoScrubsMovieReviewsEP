@@ -1,8 +1,16 @@
 <div id="grid">
   <div id="show-poster-column">
-    <h3><%= @movie.title %></h3>
+    <h3 class="movie-title-header"><%= @movie.title %></h3>
     <% if @movie.tag_line != "" %>
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
+    <% end %>
+    <% if !@movie.raters.include?(current_user) %>
+      <%= render partial: "rating" %>
+    <% end %>
+    <% if @movie.ratings.blank? %>
+      <p>This movie hasn't been rated yet. Rate it here!</p>
+    <% else %>
+      <p>Rating:<%= @movie.total_rating %> </p>
     <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
 
@@ -27,17 +35,12 @@
       <p> This movie isn't classified under a specific genre </p>
     <% end %>
 
-    <% if @ratings.blank? %>
-      <p>This movie hasn't been rated yet. Rate it below!</p>
-    <% else %>
-      <p>Rating:<%= @movie.total_rating %> </p>
-    <% end %>
   </div>
 
   <div id="show-review-column">
     <div class="overlay">
       <% if @movie.reviews.blank? %>
-        <p>No reviews just yet, add one below!</p>
+        <p>No reviews just yet, add one!</p>
       <% else %>
         <% @movie.reviews.each do |review| %>
           <p><%= review.content %></p>
@@ -47,12 +50,14 @@
     </div>
   </div>
 
-  <div id="show-form-column">
-    <% if @movie.reviewers.include?(current_user) %>
-      <h3>"Thanks for reviewing this movie!"</h3>
-    <% else %>
-      <h3>Produce a Review</h3>
-      <%= render "reviews/new"%>
-    <% end %>
-  </div>
+  <% if logged_in? %>
+    <div id="show-form-column">
+      <% if @movie.reviewers.include?(current_user) %>
+        <h3>"Thanks for reviewing this movie!"</h3>
+      <% else %>
+        <h3>Produce a Review</h3>
+        <%= render "reviews/new"%>
+      <% end %>
+    </div>
+  <% end %>
 </div>

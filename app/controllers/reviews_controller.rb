@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
   def index
     @movie = Movie.find(params[:movie_id])
     @review = Review.new
+    @rating = Rating.new
   end
 
   def new
