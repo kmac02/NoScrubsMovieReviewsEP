@@ -65,6 +65,9 @@ button {
 }
 
 /*MOVIES INDEX*/
+html, body{
+  min-height: 100%;
+}
 body {
   width: 100%;
   margin: 0;
@@ -107,3 +110,6 @@ width: 450px;
   padding: 10px;
 }
 
+.clear-fix {
+  clear: both;
+}
