@@ -21,7 +21,8 @@ img {
 
 
 * {
-  cursor: url('pizza.png'), auto
+  cursor: url('pizza.png'), auto;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -68,11 +69,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-/*  background-image: url('gradiant.png');*/
   background-attachment: fixed;
   background: linear-gradient(#f48342, #4bd1d8);
   background-repeat: no-repeat;
- /* background-size: cover;*/
 }
 
 .index-posters {
@@ -93,28 +92,12 @@ body {
 
 /*MOVIES SHOW*/
 
-/*.movie-show-details {
-  height: 100%;
-  display: inline-block;
-  vertical-align: bottom;
-  margin: 10px;
-}
-
-.review-list-container {
-  display: inline-block;
-  vertical-align: bottom;
-  margin: 10px;
-}
-
-.show-container {
-  text-align: center;
-}*/
 
 img.show-poster {
 width: 450px;
 }
 
-/* Create three equal columns that floats next to each other */
+/* Create three equal columns*/
 .column {
   float: left;
   display: inline-block;
@@ -123,9 +106,4 @@ width: 450px;
   width: 33.29%;
   padding: 10px;
 }
-
-* {
-    box-sizing: border-box;
-}
-
 
