@@ -16,5 +16,7 @@ class Movie < ActiveRecord::Base
   star_total/total_ratings
   end
 
+   paginates_per 12
+
 end
 

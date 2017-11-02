@@ -30,7 +30,13 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'httparty'
 
+# Added gems
+
+# This is used for integrating movie API
 gem 'themoviedb'
+
+# This will assist with pagination
+gem 'kaminari'
 
 gem 'jquery-rails'
 

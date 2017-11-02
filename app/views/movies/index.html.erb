@@ -1,3 +1,6 @@
+
+<%= paginate @movies %>
+
 <div class="index-container">
 <% @movies.each do |movie| %>
   <%= link_to movie_reviews_path(movie) do %>
