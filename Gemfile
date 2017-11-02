@@ -38,6 +38,10 @@ gem 'themoviedb'
 # This will assist with pagination
 gem 'kaminari'
 
+gem 'jquery-rails'
+
+gem 'yarn'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

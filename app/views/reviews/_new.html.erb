@@ -1,0 +1,4 @@
+<%= form_for([@movie, @review], url: movie_reviews_path) do |f| %>
+  <%= f.text_area :content, size: "50x10" %><br>
+  <%= f.submit "Produce This Review" %>
+<% end %>

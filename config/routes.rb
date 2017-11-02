@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
 
-  resources :movies, only: [:show, :index]
+  resources :movies, only: [:index] do
+    resources :reviews, only: [:index, :new, :create]
+  end
 
   resources :genres, only: [:index, :show]
 
-  resources :reviews, only: [:show, :create, :new] do
-    resources :comments, only: [:show, :create, :new]
+  resources :reviews, only: [] do
+    resources :comments, only: [:index, :new, :create]
   end
 end

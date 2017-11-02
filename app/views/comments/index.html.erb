@@ -1,0 +1,10 @@
+<h1><%= @review.movie.title %></h1>
+
+<h3><%= @review.content %></h3>
+
+<% @review.comments.each do |comment| %>
+  <p><%= comment.content %></p>
+  <p>Commented by <%= comment.commenter.username %></p>
+<% end %>
+
+<%= render "new" %>

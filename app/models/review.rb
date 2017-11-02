@@ -5,7 +5,7 @@ class Review < ActiveRecord::Base
   has_many :votes, dependent: :destroy
 
   validates :reviewer, uniqueness: { scope: :movie , message: "You have already reviewed this movie" }
-
+  validates_length_of :content, :minimum => 10
   def lovescrub_ratio
     if self.votes.empty?
       return 0
