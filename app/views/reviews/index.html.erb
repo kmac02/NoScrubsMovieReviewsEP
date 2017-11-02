@@ -1,7 +1,9 @@
-<div class="movie-show-details">
-  <h2><%= @movie.title %></h2>
-  <h3><%= @movie.tag_line %></h3>
-  <img src="<%= @movie.poster_url%>">
+<div class="column">
+  <h3><%= @movie.title %></h3>
+  <% if @movie.tag_line != "" %>
+    <h3><i>"<%= @movie.tag_line %>"</i></h3>
+  <% end %>
+  <img class="show-poster" src="<%= @movie.poster_url%>">
   <% if @ratings.blank? %>
     <p>This movie hasn't been rated yet. Rate it below!</p>
   <% else %>
@@ -9,18 +11,24 @@
   <% end %>
 </div>
 
-<div class="review-list-container">
+<div class="column">
   <% if @movie.reviews.blank? %>
-    <p>No reviews just yet, would you like to add the first!</p>
+    <p>No reviews just yet, add one below!</p>
   <% else %>
     <% @movie.reviews.each do |review| %>
       <p><%= review.content %></p>
-     <%= link_to "Comments", review_comments_path(review) %>
+      <%= link_to "Comments", review_comments_path(review) %>
     <% end %>
   <% end %>
-<div>
-
-<div class="review-form-container">
-  <%= render "reviews/new"%>
 </div>
 
+<div class="column">
+  <div class="review-form-container">
+    <h3>Produce a Review</h3>
+    <%= render "reviews/new"%>
+  </div>
+</div>
+
+<div class="clear-fix">
+
+</div>
