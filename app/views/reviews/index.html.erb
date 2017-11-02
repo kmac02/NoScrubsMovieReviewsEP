@@ -5,6 +5,28 @@
       <h3><i>"<%= @movie.tag_line %>"</i></h3>
     <% end %>
     <img class="show-poster" src="<%= @movie.poster_url%>">
+
+    <% if @movie.genres != nil %>
+      <p>Browse genres below for more movies like <%= @movie.title %>.</p>
+      <% @movie.genres.each do |genre| %>
+        <p><%= link_to genre.name, genre_path(genre)%></p>
+
+        <div class="genre-scroll-container">
+        <% genre.movies.each do |movie| %>
+          <div class="genre-poster-div">
+          <%= link_to movie_reviews_path(movie) do %>
+            <img src="<%=movie.poster_url%>" class="genre-posters">
+          <% end %>
+          </div>
+        <% end %>
+        </div>
+
+      <% end %>
+
+    <% else %>
+      <p> This movie isn't classified under a specific genre </p>
+    <% end %>
+
     <% if @ratings.blank? %>
       <p>This movie hasn't been rated yet. Rate it below!</p>
     <% else %>
