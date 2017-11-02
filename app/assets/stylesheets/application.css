@@ -39,21 +39,14 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+button {
+     background:none;
+     color:inherit;
+     border:none;
+     padding:0;
+     font: inherit;
+     cursor: pointer;
+}
 
 /*MOVIES INDEX*/
 body {
@@ -67,10 +60,5 @@ body {
 html {
   height: 100%;
 }
-
-
-
-
-
 
 /*MOVIES SHOW*/

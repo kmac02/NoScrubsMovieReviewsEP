@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   has_many :ratings, foreign_key: :rater_id
   has_many :votes, foreign_key: :voter_id
 
+  has_secure_password
   validates :username, uniqueness: true
   validates :username, presence: true
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }
+
 end

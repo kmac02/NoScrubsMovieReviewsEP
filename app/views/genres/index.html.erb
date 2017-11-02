@@ -1,0 +1,9 @@
+<h2 id="genre-header">Genres:</h2>
+
+<div id="genre-list-container">
+  <ul>
+    <% @genres.each do |genre| %>
+      <li><%= link_to genre.name, genre %></li>
+    <% end %>
+  </ul>
+</div>
