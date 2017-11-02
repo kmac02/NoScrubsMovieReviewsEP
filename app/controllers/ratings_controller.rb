@@ -16,9 +16,4 @@ class RatingsController < ApplicationController
     end
   end
 
-  private
-  # def rating_params
-  #   params.require(:rating).permit(:star_rating).merge(reviewer_id: current_user.id)
-  # end
-
 end
