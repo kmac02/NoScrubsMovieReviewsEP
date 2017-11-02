@@ -1,1 +1,8 @@
-$(".nav").replaceWith("<%= j render('application/nav') %>")
+$(".login-container").empty();
+$(".nav").replaceWith("<%= j render('application/nav') %>");
+
+$(".login-message").html("<%= j render('application/message') %>")
+
+setTimeout(function() {
+  $(".login-message").fadeOut();
+}, 5000);
