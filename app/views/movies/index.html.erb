@@ -1,6 +1,6 @@
 <div class="index-container">
 <% @movies.each do |movie| %>
-  <%= link_to movies_path(movie) do %>
+  <%= link_to movie_reviews_path(movie) do %>
     <img src="<%=movie.poster_url%>" class="index-posters">
   <% end %>
 <% end %>
