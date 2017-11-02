@@ -11,7 +11,14 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path
+
+      respond_to do |format|
+        format.html do
+          redirect_to root_path
+        end
+
+        format.js
+      end
     else
       redirect_to '/login'
     end
