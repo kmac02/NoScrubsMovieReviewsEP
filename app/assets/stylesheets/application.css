@@ -48,3 +48,17 @@ button {
      cursor: pointer;
 }
 
+/*MOVIES INDEX*/
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#f48342, #0fad85);
+  background-repeat: no-repeat;
+}
+
+html {
+  height: 100%;
+}
+
+/*MOVIES SHOW*/
