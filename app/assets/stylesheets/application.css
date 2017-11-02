@@ -19,6 +19,9 @@ img {
   margin: 10px;
 }
 
+img.heart {
+  width: 20px;
+}
 
 * {
   cursor: url('pizza.png'), auto;
