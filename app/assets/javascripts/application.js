@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require jquery-ui
+//= require jquery-ui/effect.all
 //= require_tree .

@@ -40,6 +40,8 @@ gem 'kaminari'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
 gem 'yarn'
 
 # Use Capistrano for deployment
