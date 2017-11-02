@@ -9,12 +9,17 @@
   </head>
 
   <body>
-    <%= link_to 'All Movies', root_path %>
-    <%= render partial: "application/nav" %>
-    <div class="login-container"></div>
+    <div id="nav">
+      <ul>
+        <li><%= render partial: "application/nav" %></li>
+        <li><div class="login-container"></div></li>
+      </ul>
+    </div>
 
+  <div id="header-container">
     <h1><%= link_to "No Scrub Movie Review", root_path %></h1>
     <h2>Entertainment Productions</h2>
+  </div>
 
     <%= yield %>
   <footer class="footer">

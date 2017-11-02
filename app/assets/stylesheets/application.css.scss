@@ -54,6 +54,11 @@ a:hover {
 }
 
 /*STYLING MAIN HEADING*/
+#header-container {
+  text-align: center;
+  display: block;
+}
+
 h1 {
   text-align: center;
 }
@@ -100,6 +105,19 @@ h4 {
   font-family: Impact;
   letter-spacing: 1px;
 }
+
+#nav {
+  text-align: center;
+  display: block;
+}
+
+ #nav ul{
+  list-style: none;
+ }
+
+ #nav ul li {
+  margin: 10px;
+ }
 
 footer {
   text-align: center;
@@ -338,6 +356,25 @@ input {
 .heart-rating-value:hover {
   /*box-shadow: -5px 0px 35px red;*/
   background-image: image-url("luv-red.png");
+}
 
+/*MISC. LAST MINUTE STYLESZZZZZ*/
+.registration-form {
+  text-align: center;
+}
+#director_clap {
+  text-align: center;
+}
+
+.user-review {
+  text-align: center;
+}
+
+.review-overlay {
+  margin: 2px;
+  padding: 5px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgba(244, 66, 241, 0.45)
 }
 
