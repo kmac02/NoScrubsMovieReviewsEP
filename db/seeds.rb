@@ -10,6 +10,8 @@
 Tmdb::Api.key(ENV["IMDB_API_KEY"])
 
 @popular_movies = Tmdb::Movie.popular
+@now_playing = Tmdb::Movie.now_playing
+@top_rated = Tmdb::Movie.top_rated
 
 @genres = Tmdb::Genre.list
 
@@ -23,15 +25,53 @@ end
 
   tagline = movie_detail["tagline"]
   movie_genres = movie_detail["genres"]
-  made_movie = Movie.create!(title: movie.title, poster_url: poster_url, tag_line: tagline)
+  made_movie = Movie.find_or_create_by!(title: movie.title, poster_url: poster_url, tag_line: tagline)
   movie_genres.each do |genre|
     found_genre = Genre.find_by(name: genre["name"])
     Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
   end
 end
 
+@now_playing.each do |movie|
+  poster_url = "https://image.tmdb.org/t/p/w500" + movie.poster_path
+  movie_detail = Tmdb::Movie.detail(movie.id)
+
+  tagline = movie_detail["tagline"]
+  movie_genres = movie_detail["genres"]
+  made_movie = Movie.find_or_create_by!(title: movie.title, poster_url: poster_url, tag_line: tagline)
+  if movie_genres
+    movie_genres.each do |genre|
+      found_genre = Genre.find_by(name: genre["name"])
+      Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
+    end
+  end
+end
+
+@top_rated.each do |movie|
+  poster_url = "https://image.tmdb.org/t/p/w500" + movie.poster_path
+  movie_detail = Tmdb::Movie.detail(movie.id)
+
+  tagline = movie_detail["tagline"]
+  movie_genres = movie_detail["genres"]
+  made_movie = Movie.find_or_create_by!(title: movie.title, poster_url: poster_url, tag_line: tagline)
+  if movie_genres
+    movie_genres.each do |genre|
+      found_genre = Genre.find_by(name: genre["name"])
+      Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
+    end
+  end
+end
+
 10.times do
   User.create(username: Faker::Internet.user_name, password: "password")
+end
+
+m_id = 1
+
+while m_id < 30 do
+  r_id = rand(1..10)
+  Review.create(content: Faker::Lorem.paragraph, reviewer_id: r_id, movie_id: m_id)
+  m_id += 1
 end
 
 Review.create(content: "'Wonder Woman' is a superhero movie, and it fulfills the heroic and mythic demands of that genre, but it's also an entry in the genre of wisdom literature that shares hard-won insights and long-pondered paradoxes of the past with a sincere intimacy.", reviewer_id: 1, movie_id: 16)
