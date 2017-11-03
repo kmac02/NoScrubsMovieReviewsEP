@@ -1,8 +1,8 @@
-<h2> <%= current_user.username %> </h2>
+<h4> <%= current_user.username.capitalize %>'s Reviews </h4>
 
 <div class="user-review">
   <% @reviews.each do |review| %>
-    <h4><%= review.movie.title %></h4>
+    <h4><%= link_to review.movie.title, movie_reviews_path(review.movie) %></h4>
     <p><%= review.content %></p>
   <% end %>
 </div>

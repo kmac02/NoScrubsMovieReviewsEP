@@ -41,13 +41,59 @@ img.heart {
   src: url(Broadway_Bold.ttf);
 }
 
+/*STYLING LINKS*/
+a:link {
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 5px 5px 10px black;
+  color: #4bd1d8;
+  text-decoration: none;
+}
+
+/*STYLING MAIN HEADING*/
+#header-container {
+  text-align: center;
+  display: block;
+}
+
 h1 {
+  text-align: center;
+}
+h1 a {
   font-size: 75px;
   text-shadow: 2px 2px 8px white;
   text-align: center;
   font-family: "Broadway_Bold";
   margin: 40px 0px 0px 0px;
   color: #4bd1d8;
+}
+
+h1 a:visited {
+  font-size: 75px;
+  text-shadow: 2px 2px 8px white;
+  text-align: center;
+  font-family: "Broadway_Bold";
+  margin: 40px 0px 0px 0px;
+  color: #4bd1d8;
+}
+
+h1 a:hover {
+  font-size: 75px;
+  text-shadow: 2px 2px 8px white;
+  text-align: center;
+  font-family: "Broadway_Bold";
+  margin: 40px 0px 0px 0px;
+  color: white;
 }
 
 h2 {
@@ -66,6 +112,19 @@ h4 {
   font-family: Impact;
   letter-spacing: 1px;
 }
+
+#nav {
+  text-align: center;
+  display: block;
+}
+
+ #nav ul{
+  list-style: none;
+ }
+
+ #nav ul li {
+  margin: 10px;
+ }
 
 footer {
   text-align: center;
@@ -216,11 +275,11 @@ img.genre-posters {
 
 .genre-container {
   display: flex;
-/*  width: 400px;
-  height: 100px;*/
+  width: 400px;
+  height: 100px;
   margin: 0 auto;
   overflow-x: scroll;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
   justify-content: center;
   border: 2px solid #f442f1;
   box-shadow: 0px 0px 30px 8px #f442f1;
@@ -244,25 +303,7 @@ img.genre-posters {
   margin: 20px;
 }
 
-/*STYLING LINKS*/
-a:link {
-  color: white;
-  text-shadow: 5px 5px 10px black;
-  text-decoration: none;
-}
 
-a:visited {
-  color: white;
-  text-shadow: 5px 5px 10px black;
-  text-decoration: none;
-}
-
-
-a:hover {
-  text-shadow: 5px 5px 10px black;
-  color: #4bd1d8;
-  text-decoration: none;
-}
 
 /* comments show page */
 #show-movie-review-column {
@@ -322,6 +363,25 @@ input {
 .heart-rating-value:hover {
   /*box-shadow: -5px 0px 35px red;*/
   background-image: image-url("luv-red.png");
+}
 
+/*MISC. LAST MINUTE STYLESZZZZZ*/
+.registration-form {
+  text-align: center;
+}
+#director_clap {
+  text-align: center;
+}
+
+.user-review {
+  text-align: center;
+}
+
+.review-overlay {
+  margin: 2px;
+  padding: 5px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgba(244, 66, 241, 0.45)
 }
 
