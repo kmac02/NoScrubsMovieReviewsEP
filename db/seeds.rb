@@ -74,11 +74,11 @@ while m_id < 30 do
   m_id += 1
 end
 
-Review.create(content: "'Wonder Woman' is a superhero movie, and it fulfills the heroic and mythic demands of that genre, but it's also an entry in the genre of wisdom literature that shares hard-won insights and long-pondered paradoxes of the past with a sincere intimacy.", reviewer_id: 1, movie_id: 16)
+Review.create(content: "This is a superhero movie, and it fulfills the heroic and mythic demands of that genre, but it's also an entry in the genre of wisdom literature that shares hard-won insights and long-pondered paradoxes of the past with a sincere intimacy.", reviewer_id: 1, movie_id: 4)
 
-Review.create(content: "Wonder Woman embraces issues of female power and the need to turn from hate to love, war to peace in a mainstream delivery system. And the female lead is not solely a mother, sister, girlfriend or hooker, however gold her heart: wonder of wonders!", reviewer_id: 2, movie_id: 16)
+Review.create(content: "This movie embraces issues of female power and the need to turn from hate to love, war to peace in a mainstream delivery system. And the female lead is not solely a mother, sister, girlfriend or hooker, however gold her heart: wonder of wonders!", reviewer_id: 2, movie_id: 4)
 
-Review.create(content: "This is undoubtedly the strongest DCEU outing till now, one that will add a new world of (female) fans to the franchise, and for all the right reasons.", reviewer_id: 3, movie_id: 16)
+Review.create(content: "This is undoubtedly the strongest DCEU outing till now, one that will add a new world of (female) fans to the franchise, and for all the right reasons.", reviewer_id: 3, movie_id: 4)
 
 Rating.create(star_rating: 3, rater_id: 1, movie_id: 4)
 Rating.create(star_rating: 3, rater_id: 2, movie_id: 4)
