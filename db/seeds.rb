@@ -28,7 +28,7 @@ end
   made_movie = Movie.find_or_create_by!(title: movie.title, poster_url: poster_url, tag_line: tagline)
   movie_genres.each do |genre|
     found_genre = Genre.find_by(name: genre["name"])
-    Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
+    Labeling.find_or_create_by!(movie_id: made_movie.id, genre_id: found_genre.id)
   end
 end
 
@@ -42,7 +42,7 @@ end
   if movie_genres
     movie_genres.each do |genre|
       found_genre = Genre.find_by(name: genre["name"])
-      Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
+      Labeling.find_or_create_by!(movie_id: made_movie.id, genre_id: found_genre.id)
     end
   end
 end
@@ -57,7 +57,7 @@ end
   if movie_genres
     movie_genres.each do |genre|
       found_genre = Genre.find_by(name: genre["name"])
-      Labeling.create!(movie_id: made_movie.id, genre_id: found_genre.id)
+      Labeling.find_or_create_by!(movie_id: made_movie.id, genre_id: found_genre.id)
     end
   end
 end
@@ -80,13 +80,13 @@ Review.create(content: "Wonder Woman embraces issues of female power and the nee
 
 Review.create(content: "This is undoubtedly the strongest DCEU outing till now, one that will add a new world of (female) fans to the franchise, and for all the right reasons.", reviewer_id: 3, movie_id: 16)
 
-Rating.create(star_rating: 3, rater_id: 1, movie_id: 16)
-Rating.create(star_rating: 3, rater_id: 2, movie_id: 16)
-Rating.create(star_rating: 2, rater_id: 3, movie_id: 16)
-Rating.create(star_rating: 2, rater_id: 4, movie_id: 16)
-Rating.create(star_rating: 2, rater_id: 5, movie_id: 16)
-Rating.create(star_rating: 2, rater_id: 6, movie_id: 16)
-Rating.create(star_rating: 1, rater_id: 7, movie_id: 16)
+Rating.create(star_rating: 3, rater_id: 1, movie_id: 4)
+Rating.create(star_rating: 3, rater_id: 2, movie_id: 4)
+Rating.create(star_rating: 2, rater_id: 3, movie_id: 4)
+Rating.create(star_rating: 2, rater_id: 4, movie_id: 4)
+Rating.create(star_rating: 2, rater_id: 5, movie_id: 4)
+Rating.create(star_rating: 2, rater_id: 6, movie_id: 4)
+Rating.create(star_rating: 1, rater_id: 7, movie_id: 4)
 
 Comment.create(content: "I totally agree with you!", commenter_id: 7, review_id: 1)
 Comment.create(content: "That's a great review you left! I will have to see it.", commenter_id: 9, review_id: 1)
